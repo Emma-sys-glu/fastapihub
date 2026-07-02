@@ -1,0 +1,33 @@
+.navbar{
+    background:#E9E4E0 !important;
+    min-height:78px;
+    padding:14px 0;
+    box-shadow:0 4px 18px rgba(27,25,26,.12);
+}
+
+.navbar-brand{
+    font-size:30px;
+    font-weight:900;
+    color:#943A1F !important;
+}
+
+.navbar-brand i{
+    color:#943A1F;
+}
+
+.navbar-nav{
+    gap:18px;
+}
+
+.nav-link{
+    font-weight:700;
+    color:#1B191A !important;
+    padding:10px 16px !important;
+    border-radius:999px;
+    transition:.3s;
+}
+
+.nav-link:hover{
+    background:#943A1F;
+    color:#E9E4E0 !important;
+}

@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+
+{% block title %}
+Laboratorio API
+{% endblock %}
+
+{% block content %}
+
+<section class="container py-5">
+
+    <div class="text-center mb-5">
+        <h1 class="fw-bold">Laboratorio API</h1>
+        <p class="lead">
+            CRUD de personas usando FastAPI, PostgreSQL y JavaScript.
+        </p>
+    </div>
+
+    <div id="mensaje"></div>
+
+    <div class="card mb-4">
+        <div class="card-body">
+
+            <h4 class="fw-bold mb-3">Agregar / Editar persona</h4>
+
+            <div class="endpoint-box mb-3">
+                Endpoint actual:
+                <strong id="endpointActual" class="endpoint-post">
+                    POST /api/personas
+                </strong>
+            </div>
+
+            <input type="hidden" id="personaId">
+
+            <div class="row g-3">
+
+                <div class="col-md-4">
+                    <input class="form-control" id="nombre" placeholder="Nombre">
+                </div>
+
+                <div class="col-md-4">
+                    <input class="form-control" id="apellido" placeholder="Apellido">
+                </div>
+
+                <div class="col-md-2">
+                    <input class="form-control" id="edad" type="number" placeholder="Edad">
+                </div>
+
+                <div class="col-md-6">
+                    <input class="form-control" id="correo" placeholder="Correo">
+                </div>
+
+                <div class="col-md-4">
+                    <input class="form-control" id="ciudad" placeholder="Ciudad">
+                </div>
+
+                <div class="col-md-2">
+                    <button class="btn btn-primary w-100" onclick="guardarPersona()">
+                        Guardar
+                    </button>
+                </div>
+
+                <div class="col-md-2">
+                    <button class="btn btn-outline-secondary w-100" onclick="limpiarFormulario()">
+                        Limpiar
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="card">
+
+        <div class="card-body">
+
+            <div class="d-flex justify-content-between align-items-center mb-4">
+
+                <h4 class="fw-bold mb-0">
+                    Personas registradas
+                </h4>
+
+                <span class="endpoint-get">
+                    GET /api/personas
+                </span>
+
+            </div>
+
+            <div class="table-responsive">
+
+                <table class="table table-hover align-middle">
+
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Edad</th>
+                            <th>Correo</th>
+                            <th>Ciudad</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tablaPersonas"></tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<script src="/static/js/laboratorio.js?v=5"></script>
+
+{% endblock %}

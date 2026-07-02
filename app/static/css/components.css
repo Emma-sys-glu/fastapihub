@@ -1,0 +1,299 @@
+/* ===========================
+   COMPONENTES GENERALES
+=========================== */
+
+.card{
+    border-radius:22px !important;
+    border:0 !important;
+    box-shadow:0 18px 45px rgba(27,25,26,.10) !important;
+}
+
+pre{
+    background:#1B191A !important;
+    color:#E9E4E0 !important;
+    border-radius:16px !important;
+}
+
+/* ===========================
+   TUTORIAL - MENÚ DE NIVELES
+=========================== */
+
+.levels-scroll{
+    max-height:520px;
+    overflow-y:auto;
+    padding-right:8px;
+}
+
+.levels-scroll::-webkit-scrollbar{
+    width:8px;
+}
+
+.levels-scroll::-webkit-scrollbar-track{
+    background:#E9E4E0;
+    border-radius:10px;
+}
+
+.levels-scroll::-webkit-scrollbar-thumb{
+    background:#943A1F;
+    border-radius:10px;
+}
+
+.level-btn{
+    width:100%;
+    text-align:left;
+    padding:14px 16px;
+    border-radius:16px;
+    border:1px solid rgba(27,25,26,.12);
+    background:#E9E4E0;
+    color:#1B191A;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.level-btn:hover{
+    transform:translateX(4px);
+}
+
+.level-btn.active-level{
+    background:#F2E3DB;
+    border-left:6px solid #943A1F;
+}
+
+.level-btn.completed-level{
+    background:#E6D6CE;
+    border-left:6px solid #943A1F;
+}
+
+.level-btn.locked-level{
+    background:#D7D0CC;
+    color:#6B625E;
+    cursor:not-allowed;
+}
+
+.level-btn:disabled{
+    opacity:.6;
+    cursor:not-allowed;
+}
+
+/* ===========================
+   TUTORIAL - TARJETAS
+=========================== */
+
+.lesson-card{
+    transition:.3s;
+}
+
+.lesson-card .badge{
+    background:#943A1F !important;
+    color:#E9E4E0 !important;
+}
+
+/* ===========================
+   ALERTAS DEL TUTORIAL
+=========================== */
+
+.alert-info,
+.alert-warning,
+.alert-success,
+.alert-primary{
+    border-radius:16px;
+    border:1px solid rgba(148,58,31,.25);
+    color:#1B191A;
+}
+
+.alert-info{
+    background:#EFE2DB;
+}
+
+.alert-warning{
+    background:#E9D4C8;
+}
+
+.alert-success{
+    background:#E4DBD5;
+}
+
+.alert-primary{
+    background:#F3E8E2;
+}
+
+/* ===========================
+   PROGRESS BAR
+=========================== */
+
+.progress{
+    height:22px;
+    background:#D8D0CA !important;
+    border-radius:999px;
+    overflow:hidden;
+}
+
+.progress-bar{
+    background:#943A1F !important;
+    color:#E9E4E0 !important;
+    font-weight:700;
+}
+
+/* ===========================
+   BOTONES
+=========================== */
+
+.btn-outline-secondary{
+    border-color:#6B625E !important;
+    color:#1B191A !important;
+}
+
+.btn-outline-secondary:hover{
+    background:#1B191A !important;
+    color:#E9E4E0 !important;
+}
+
+.btn-outline-primary{
+    border-color:#943A1F !important;
+    color:#943A1F !important;
+}
+
+.btn-outline-primary:hover{
+    background:#943A1F !important;
+    color:#E9E4E0 !important;
+}
+
+/*=================================
+LABORATORIO
+=================================*/
+
+.endpoint-get,
+.endpoint-post{
+    background:#943A1F;
+    color:#E9E4E0;
+    padding:4px 10px;
+    border-radius:8px;
+    font-size:.75rem;
+    font-weight:700;
+}
+
+.endpoint-put{
+    background:#6B625E;
+    color:#E9E4E0;
+    padding:4px 10px;
+    border-radius:8px;
+    font-size:.75rem;
+    font-weight:700;
+}
+
+.endpoint-delete{
+    background:#1B191A;
+    color:#E9E4E0;
+    padding:4px 10px;
+    border-radius:8px;
+    font-size:.75rem;
+    font-weight:700;
+}
+
+/* Botón editar */
+
+.btn-edit{
+
+    background:#6B625E;
+
+    color:#E9E4E0;
+
+    border:none;
+
+    transition:.3s;
+
+}
+
+.btn-edit:hover{
+
+    background:#514B48;
+
+    color:white;
+
+}
+
+/* Botón eliminar */
+
+.btn-delete{
+
+    background:#1B191A;
+
+    color:#E9E4E0;
+
+    border:none;
+
+    transition:.3s;
+
+}
+
+.btn-delete:hover{
+
+    background:#000;
+
+    color:white;
+
+}
+
+.endpoint-get,
+.endpoint-post,
+.endpoint-put,
+.endpoint-delete{
+    background:#943A1F !important;
+    color:#E9E4E0 !important;
+    padding:4px 10px;
+    border-radius:8px;
+    font-size:.75rem;
+    font-weight:700;
+    display:inline-block;
+}
+
+.btn-edit,
+.btn-delete{
+    background:#943A1F !important;
+    color:#E9E4E0 !important;
+    border:1px solid #943A1F !important;
+}
+
+.btn-edit:hover,
+.btn-delete:hover{
+    background:#1B191A !important;
+    color:#E9E4E0 !important;
+    border-color:#1B191A !important;
+}
+
+/*==================================
+NAVEGACIÓN DEL TUTORIAL
+==================================*/
+.tutorial-navigation{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:35px;
+    padding-top:25px;
+    border-top:1px solid rgba(27,25,26,.12);
+}
+
+.tutorial-nav-btn{
+    width:54px;
+    height:54px;
+    border-radius:50%;
+    border:none;
+    background:#943A1F;
+    color:#E9E4E0;
+    font-size:22px;
+    transition:.25s;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 10px 25px rgba(148,58,31,.25);
+}
+
+.tutorial-nav-btn:hover{
+    background:#1B191A;
+    color:#E9E4E0;
+    transform:scale(1.08);
+}
+
+.tutorial-nav-btn i{
+    color:#E9E4E0;
+}

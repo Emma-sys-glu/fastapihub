@@ -1,0 +1,130 @@
+.home-hero{
+    min-height:calc(100vh - 78px);
+    display:flex;
+    align-items:center;
+    padding:70px 0;
+    overflow:hidden;
+}
+
+.home-content{
+    max-width:900px;
+    margin-left:7vw;
+}
+
+.home-hero h1{
+    font-size:clamp(4.8rem, 7vw, 7rem);
+    font-weight:900;
+    line-height:.95;
+    color:#1B191A;
+    margin-bottom:28px;
+    letter-spacing:-3px;
+}
+
+.home-subtitle{
+    font-size:clamp(1.6rem, 2.2vw, 2.4rem);
+    color:#943A1F;
+    font-weight:800;
+    max-width:900px;
+    margin-bottom:24px;
+}
+
+.home-description{
+    font-size:1.25rem;
+    color:#3c3633;
+    line-height:1.7;
+    max-width:760px;
+    margin-bottom:38px;
+}
+
+.home-buttons{
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.home-buttons .btn{
+    padding:15px 34px;
+    font-size:18px;
+    font-weight:800;
+}
+
+.architecture-card{
+    width:100%;
+    max-width:470px;
+    background:#1B191A;
+    border-radius:28px;
+    padding:34px;
+    margin-left:auto;
+    margin-right:7vw;
+    box-shadow:0 35px 80px rgba(27,25,26,.35);
+}
+
+.architecture-title{
+    text-align:center;
+    font-size:25px;
+    font-weight:900;
+    color:#E9E4E0;
+    margin-bottom:10px;
+}
+
+.architecture-description{
+    text-align:center;
+    color:#d6cec8;
+    font-size:16px;
+    line-height:1.5;
+    margin-bottom:28px;
+}
+
+.architecture-step{
+    background:#E9E4E0;
+    border-radius:18px;
+    padding:18px 22px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    font-size:18px;
+    font-weight:800;
+    color:#1B191A;
+    border:1px solid rgba(148,58,31,.25);
+}
+
+.architecture-step i{
+    color:#943A1F;
+    font-size:23px;
+}
+
+.architecture-arrow{
+    text-align:center;
+    color:#943A1F;
+    font-size:20px;
+    margin:7px 0;
+}
+
+@media(max-width:992px){
+
+    .home-hero{
+        padding:55px 0;
+        overflow:visible;
+        text-align:center;
+    }
+
+    .home-content{
+        margin-left:0;
+        max-width:100%;
+    }
+
+    .home-hero h1{
+        font-size:3.8rem;
+        letter-spacing:-1px;
+    }
+
+    .home-buttons{
+        justify-content:center;
+    }
+
+    .architecture-card{
+        margin:40px auto 0;
+        max-width:430px;
+    }
+
+}

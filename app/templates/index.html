@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block title %}
+Inicio
+{% endblock %}
+
+{% block content %}
+
+<section class="home-hero">
+
+    <div class="container-fluid px-5">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-7">
+
+                <div class="home-content">
+
+                    <h1>
+                        {{ inicio.titulo }}
+                    </h1>
+
+                    <h3 class="home-subtitle">
+                        {{ inicio.subtitulo }}
+                    </h3>
+
+                    <p class="home-description">
+                        {{ inicio.descripcion }}
+                    </p>
+
+                    <div class="home-buttons">
+
+                        <a href="/tutorial" class="btn btn-primary rounded-pill">
+                            {{ inicio.boton_principal }}
+                        </a>
+
+                        <a href="/laboratorio" class="btn btn-outline-primary rounded-pill">
+                            {{ inicio.boton_secundario }}
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-5">
+
+                <div class="architecture-card">
+
+                    <div class="architecture-title">
+                        {{ secciones_inicio.arquitectura.titulo }}
+                    </div>
+
+                    <p class="architecture-description">
+                        {{ secciones_inicio.arquitectura.descripcion }}
+                    </p>
+
+                    {% for item in arquitectura_inicio %}
+
+                    <div class="architecture-step">
+                        <i class="{{ item.icono }}"></i>
+                        <span>{{ item.nombre }}</span>
+                    </div>
+
+                    {% if not loop.last %}
+                    <div class="architecture-arrow">↓</div>
+                    {% endif %}
+
+                    {% endfor %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
